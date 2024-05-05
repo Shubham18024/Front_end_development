@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(175, 168, 227);
+        }
+    </style>
+    <title>Forms</title>
+</head>
+
+
+<body>
+    <form autocomplete="on"> <!-- <form method="POST" action="form.php"> -->
+        <input type="button" onclick='alert("Good Morning!")' value="My Button">
+        <br>
+
+        <input type="checkbox" name="fruit" value="banana" id="Seb">
+        <label for="Seb"> Banana</label>
+        <br>
+        <label>
+            <input type="checkbox" name="fruit" value="banana"> Banana
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="fruit" value="apple" disabled> Apple
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" name="fruit" value="orange"> Orange
+        </label>
+        <br>
+
+        <input type="submit" value="Submit">
+        <br>
+
+        <input type="color" name="item-color">
+        <br>
+
+        <input type="date" name="birthday">
+        <br>
+
+        <input type="datetime-local" name="bdaydatetime">
+        <br>
+
+        <input type="email" name="email" id="email" multiple> E-mail
+        <br>
+
+        <input type="file" name="doc">
+        <br>
+
+        <input type="image" name="Submit" src="submit.png" alt="Submit"> <!-- It works bydefault as submit button-->
+        <br>
+
+        <input type="number" name="cost"> Cost of company
+        <br>
+
+        <input type="password" name="pw"> Enter password<br>
+
+        <input type="radio" name="state" value="AL">AL
+        <input type="radio" name="state" value="AK">Ak
+        <input type="radio" name="state" value="AZ">Az<br>
+
+        <input type="url" name="page">Enter URL<br>
+
+        <input type="range" name="survey" min="0" max="465"><br> <!-- fow showing number in slider use js-->
+
+        <input type="search" name="search">Search Box<br>
+
+        <input type="text" name="fName" id="fName">Just Text<br>
+
+        <label>Username <input name="username" type="text" size="10" maxlength="20"></label>
+        <label>Password <input name="password" type="password" size="8" maxlength="10"></label><br>
+
+        <h1>Textarea</h1>
+        <label>Please tell us more about your shopping experience with us today.</label>
+        <textarea name="feedback" rows="5" cols="100" autofocus></textarea>
+
+        <h1>Select</h1>
+        <select name="referral">
+            <option>Advertisement</option>
+            <option>Friend</option>
+            <option>Google</option>
+            <option>Social Media</option>
+        </select>
+
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="123-456-7890"><br>
+        </fieldset>
+
+
+        <input type="text" name="ssn" id="ssn" value="555123654" readonly><br>
+
+        <input list="music">
+        <datalist id="music">
+            <option value="Country"> <!-- Used with the datalist element to specify predefined
+                                                     options for an input element-->
+            <option value="Classical">
+            <option value="Hip Hop">
+            <option value="Rock">
+        </datalist>
+    </form>
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
