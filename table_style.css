@@ -1,0 +1,37 @@
+.table-container {
+    margin: 0 auto;
+    /* Auto margin horizontally centers the container */
+    width: 38%;
+    /* Adjust width as needed */
+}
+
+
+table {
+    width: 470px;
+    border-spacing: 5px;
+}
+
+caption {
+    color: blue;
+    font-weight: bolder;
+    border-bottom: 10px solid #a52a2a;
+    padding-bottom: 6px;
+    margin-bottom: 12px
+}
+
+th,
+td {
+    padding: 6px 2.5px 6px 8px;
+    border-color: blue;
+    border-width: 2px;
+
+}
+
+.even {
+    background-color: #d3d3d3;
+
+}
+
+.head {
+    background-color: #ffff00;
+}
