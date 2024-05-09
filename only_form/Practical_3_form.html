@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practicals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+    
+        h2 {
+            text-align: center;
+        }
+    
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #dedede;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        fieldset {
+            border: none;
+        }
+    
+        legend {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+    
+        input[type="submit"],
+        input[type="reset"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student Registration Form</h2>
+    <form autocomplete="on" onsubmit="return validate(this)">
+        <fieldset>
+            <legend>Information</legend>
+            Name : <input type="text" name="textname" id="fName"> <br><br>
+
+            Roll Number : <input type="text" name="roll_num" id="roll_num" placeholder="1234567"> <br><br>
+
+            DOB : <input type="date" name="birthdate" id="dob"> <br><br>
+
+            Text Area : <textarea placeholder="Please Enter Feedback" rows="4" cols="40"
+                id="textarea"></textarea><br><br>
+
+            DropDown : <select id="drop" name="shopping_options">
+                <option value="bag">Bag</option>
+                <option value="socks">Socks</option>
+                <option value="shoes">Shoes</option>
+            </select> <br><br>
+
+            Radio : <input type="radio" name="section" value="Sec A">Section A
+            <input type="radio" name="section" value="Sec B">Section B
+            <input type="radio" name="section" value="Sec C">Section C <br><br>
+
+            CheckBox : <input type="checkbox" name="fruit" value="apple">Apple
+            <input type="checkbox" name="fruit" value="Banana">Banana
+            <input type="checkbox" name="fruit" value="Guava">Guava <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+
+    </form>
+
+
+    <script>
+        function validate(form) {
+            fail = validateName(form.fName.value)
+            fail += validateRoll(form.roll_num.value)
+            fail += validatedob(form.dob.value)
+
+            if (fail == "") { alert("Form Submitted!"); return true; }
+            else { alert(fail); return false; }
+        }
+
+        function validateName(field) {
+            if (field === "") return "No Name was entered\n";
+            else if (/[^a-zA-z]/.test(field)) return "Name should be an alphabetical value (String).\n"
+            else return "";
+        }
+
+        function validateRoll(field) {
+            if (field === "") return "No roll number was entered\n";
+            else if (field.length < 7) return "Roll number is a 7-digit numeric value\n";
+            else return "";
+        }
+
+        function validatedob(field) {
+            if (field === "") return "No DOB was entered\n";
+            else return "";
+        }
+    </script>
+</body>
+
+</html>
